@@ -8,11 +8,16 @@
 
 <script>
 import McvTopbar from '@/components/Topbar'
+import {actionTypes} from '@/store/modules/auth'
 
 export default {
   name: 'McvApp',
   components: {
     McvTopbar
+  },
+
+  mounted() {
+    this.$store.dispatch(actionTypes.getCurrentUser)
   }
 }
 </script>
