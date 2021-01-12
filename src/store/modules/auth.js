@@ -99,8 +99,8 @@ const mutations = {
 
 const actions = {
   [actionTypes.register](context, credentials) {
-    context.commit(mutationTypes.registerStart)
     return new Promise(resolve => {
+      context.commit(mutationTypes.registerStart)
       authApi
         .register(credentials)
         .then(response => {
@@ -118,8 +118,8 @@ const actions = {
   },
 
   [actionTypes.login](context, credentials) {
-    context.commit(mutationTypes.loginStart)
     return new Promise(resolve => {
+      context.commit(mutationTypes.loginStart)
       authApi
         .login(credentials)
         .then(response => {
@@ -137,8 +137,8 @@ const actions = {
   },
 
   [actionTypes.getCurrentUser](context) {
-    context.commit(mutationTypes.getCurrentUserStart)
     return new Promise(resolve => {
+      context.commit(mutationTypes.getCurrentUserStart)
       authApi
         .getCurrentUser()
         .then(response => {
